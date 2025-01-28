@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopcornHour</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/login">Iniciar sesión</a></li>
+                <li><a href="/register">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home-guest">
+            <h1>Bienvenido a PopcornHour</h1>
+            <p>Descubre, califica y discute tus películas y series favoritas.</p>
+            <a href="/register" class="cta">Únete ahora</a>
+        </section>
+
+        <section id="home-user" style="display: none;">
+            <h1>Bienvenido de nuevo, [Usuario]</h1>
+            <p>Explora las últimas recomendaciones y participa en discusiones.</p>
+            <a href="/movies" class="cta">Explorar películas</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PopcornHour. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Simulación para mostrar contenido según sesión iniciada o no
+        const isLoggedIn = false; // Cambiar a true para simular usuario logueado
+
+        document.getElementById('home-guest').style.display = isLoggedIn ? 'none' : 'block';
+        document.getElementById('home-user').style.display = isLoggedIn ? 'block' : 'none';
+    </script>
+</body>
+</html>
